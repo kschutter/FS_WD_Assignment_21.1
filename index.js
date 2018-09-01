@@ -17,7 +17,8 @@ MongoClient.connect(url, function(err, db) {
         }
         console.log("Collection Created!");
     })
-    dbase.insertMany([
+
+    dbase.employees.insertMany([
         {
             "Ename": "John Smith", "department": "clerical staff", "designation": "secretary",
             "salary": 3500, "dateOfJoining": "9/1/1990", "city": "Delhi"
@@ -26,4 +27,6 @@ MongoClient.connect(url, function(err, db) {
             "Ename": "Ashley Xang", "department": "support staff"
         }
     ])
+
+    // db.close();
 })
